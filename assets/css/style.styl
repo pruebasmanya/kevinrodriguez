@@ -1,5 +1,5 @@
 @import "nib"
-vendor-prefixes = webkit o ms moz
+vendor-prefixes = webkit o ms moz official
 azul = #22BCE0
 gris_texto= #7A7A7A
 azul_fondo=rgb(16,139,199)
@@ -62,35 +62,52 @@ nav
 	background #fff
 	height 70px
 	padding 0
-	.navbar-brand
-		padding 7px 0 0 0
-	.navbar-L
-		ul
-			li
-				margin 7px 5px
-				a
-					color #fff
-		.why-us
-		.reason-to-come
-			background azul_boton
-			border-bottom 4px solid azul_boton_borde
-		.tw
-			background btn-tw
-			border-bottom 4px solid btn-tw-borde
-		.fb
-			background btn-fb
-			border-bottom 4px solid btn-fb-borde
-		.sky
-			background btn-sky
-			border-bottom 4px solid btn-sky-borde
-		.call-us
-			background btn-callus
-			border-bottom 4px solid btn-callus-borde			
-
-.section-main
-	height 540px
 	position relative
-	.scena
+	.navbar-header
+		.navbar-toggle
+			position absolute
+			right 25px
+			margin 0
+			bottom 17px
+			.icon-bar
+				background #000
+		.navbar-brand
+			padding 7px 0 0 0
+	.navbar-L
+		display none !important					
+@media (min-width: 992px)
+	nav
+		.navbar-header
+			.navbar-toggle
+				position absolute
+				right 25px
+		.navbar-L
+			display block !important
+			ul
+				li
+					margin 7px 5px
+					a
+						color #fff
+				.why-us
+				.reason-to-come
+					background azul_boton
+					border-bottom 4px solid azul_boton_borde
+				.tw
+					background btn-tw
+					border-bottom 4px solid btn-tw-borde
+				.fb
+					background btn-fb
+					border-bottom 4px solid btn-fb-borde
+				.sky
+					background btn-sky
+					border-bottom 4px solid btn-sky-borde
+				.call-us
+					background btn-callus
+					border-bottom 4px solid btn-callus-borde
+.section-main
+	height 650px
+	position relative
+	.div-escena
 		ul
 			list-style none
 			padding 0
@@ -99,7 +116,180 @@ nav
 				padding 0
 				.machupicchu
 					position absolute
+					img
+						display block
+	.servicios
+		.zone-right
+			padding-top 65px
+			position relative
+			height 650px
+			display block
+			margin auto
+			.box
+				display inline-block
+				position relative
+				.img-Right
+					float right !important
+				.img
+					width 30%				
+					display inline-block
+					float left
+					text-align center
+					padding 10px 0 
+					span
+						line-height 100%
+					.img-asesoria
+					.img-transporte
+					.img-hospedaje
+					.img-restaurant
+					.img-eventos
+						width 75px
+						height 75px
+						line-height 75px
+						border-radius 50%
+					.img-asesoria
+						background asesoria-verde
+					.img-transporte
+						background transporte-morado
+					.img-hospedaje
+						background hospedaje-azul-claro
+					.img-restaurant
+						background restaurant-anaranjado
+					.img-eventos
+						background eventos-rojo
+				.descrip
+					/*float right*/
+					padding 15px 0 0 10px
+					width 70%
+					display inline-block
+					h4
+						padding 0
+						margin 0
+						font-weight bold
+					p
+						padding 0
+						margin 0
+			.box-asesoria
+				margin-top -20px
+		.msg
+			color btn-tw
+			position absolute
+			bottom 20px
+			left 20px
+			p
+				font-size 24px
+				padding 0
+				margin 0
+				line-height 30px
+				word-spacing 3px
+				.hands
+					font-size 34px
+					font-weight bold
+					word-spacing 0px
+					letter-spacing -1px
+@media (max-width: 450px)
+	.section-main
+		height 730px
+		.servicios
+			.zone-right
+				height 730px
+				.msg
+					position relative
+					left 0
 					bottom 0
+					text-align center
+
+@media (min-width: 768px) and (max-width: 1199px)
+	.section-main
+		height 600px
+		.servicios
+			.zone-right
+				height 600px
+				.box
+					position absolute
+					.img-Right
+						float left !important
+					.img
+						width 113px
+						height 113px
+						padding 0
+						float left
+						span
+							line-height 113px
+						.img-asesoria
+						.img-transporte
+						.img-hospedaje
+						.img-restaurant
+						.img-eventos
+							width 113px
+							height 113px
+					.descrip
+						width 220px
+				.box-asesoria
+					top 30px
+					left 280px
+				.box-transporte
+					top 150px
+					left 0
+				.box-hospedaje
+					top 260px
+					left 280px
+				.box-restaurant
+					top 370px
+					left 0
+				.box-eventos
+					bottom 10px
+					left 280px
+@media (min-width: 992px)
+	.section-main
+		.servicios
+			.zone-right
+				float right
+				padding-left 50px
+@media (min-width: 1200px)
+	.section-main
+		height 600px
+		.servicios
+			.zone-right
+				height 600px
+				.box
+					position absolute
+					.img-Right
+						float left !important
+					.img
+						width 113px
+						height 113px
+						padding 0
+						float left
+						span
+							line-height 113px
+						.img-asesoria
+						.img-transporte
+						.img-hospedaje
+						.img-restaurant
+						.img-eventos
+							width 113px
+							height 113px
+					.descrip
+						width 220px
+				.box-asesoria
+					top 30px
+					left 0
+				.box-transporte
+					top 290px
+					/*right 0px*/
+					left 105px
+				.box-hospedaje
+					top 110px
+					left 300px
+				.box-restaurant
+					top 270px
+					right 0
+				.box-eventos
+					bottom 10px
+					left 380px
+
+
 .section-call
 	height 130px
 	background azul_fondo2
@@ -108,7 +298,7 @@ nav
 		height 130px
 		.cartel
 			position absolute
-			bottom 20px
+			bottom 40px
 			left -10px
 		.movie
 			position absolute
@@ -124,18 +314,20 @@ nav
 			font-size 18px
 			background naranja			
 			text-align center
+			padding 0
+			width 100%
 			padding 0 38px
 			border-bottom 7px solid naranja_oscuro_borde			
-@media (max-width: 991px)
+@media (min-width: 992px)
 	.section-call					
 		.boton
 			.btn
-				padding 0
-				width 100%
+				width auto
+				padding 0 38px
 footer
 	background azul_fondo
 	color #fff
-	height 100px
+	height auto
 	border-top 7px solid azul_borde
 	.powered
 	.contact
@@ -167,6 +359,6 @@ footer
 					transition all 0.5s
 					&:hover
 						color azul-claro					
-@media (max-width: 991px)
+@media (min-width: 992px)
 	footer
-		height auto
+		height 100px

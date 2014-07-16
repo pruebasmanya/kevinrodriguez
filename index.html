@@ -18,16 +18,23 @@
 	<nav>
 		<div class="contenedor">
         	<div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav"> 
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#"> 
 	               <span class="icon-bar"></span>
 	               <span class="icon-bar"></span>
 	               <span class="icon-bar"></span>
 	            </button>
-	            <a href="#home" class="navbar-brand scrollto">
+	            <a href="" class="navbar-brand">
 	               <img src="assets/images/logo.png" alt="Travel to Perú" title="Travel to Perú">
 	            </a>
          	</div>
-	        <div class="collapse navbar-collapse navbar-L" id="site-nav">
+	        <div class="navbar-collapse navbar-L" id="site-nav">
+
+	        	<ul class="nav navbar-nav navbar-left">
+	        		<li>
+	        			Idioma:
+	        			<span>ESP</span>
+	        		</li>
+	        	</ul>
 	            <ul class="nav navbar-nav navbar-right">          
 	               	<li class="">
 	                  	<a href="#aboutme" class="btn why-us">¿Por qué elegirnos?</a></li>
@@ -59,15 +66,82 @@
 		
 	</nav>
 	<section class="section-main">
-		<div class="scena">
-			<ul>
-				<li>
+		<div class="div-escena">
+			<ul class="scene" id="scene">
+				<li class="layer" data-depth="0.20">
 					<div class="machupicchu">
 						<img src="assets/images/fondo.png" alt="">
 					</div>
 				</li>
 			</ul>
 		</div>
+		<div class="contenedor">
+			<div class="row servicios">
+				<div class="col-md-8 zone-right">
+					<div class="box box-asesoria">
+						<div class="img">
+							<div class="img-asesoria">
+								<span class="i">IMAGEN</span>
+							</div>
+						</div>
+						<div class="descrip">
+							<h4>Asesoría</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente!</p>
+						</div>
+					</div>
+					<div class="box box-transporte">
+						<div class="img img-Right">
+							<div class="img-transporte">
+								<span class="i">IMAGEN</span>
+							</div>
+						</div>
+						<div class="descrip">
+							<h4>Transporte</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.</p>
+						</div>
+					</div>
+					<div class="box box-hospedaje">
+						<div class="img">
+							<div class="img-hospedaje">
+								<span class="i">IMAGEN</span>
+							</div>
+						</div>
+						<div class="descrip">
+							<h4>Hospedaje</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus.</p>
+						</div>
+					</div>
+					<div class="box box-restaurant">
+						<div class="img img-Right">
+							<div class="img-restaurant">
+								<span class="i">IMAGEN</span>
+							</div>
+						</div>
+						<div class="descrip">
+							<h4>Restaurant</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut.</p>
+						</div>
+					</div>
+					<div class="box box-eventos">
+						<div class="img">
+							<div class="img-eventos">
+								<span class="i">IMAGEN</span>
+							</div>
+						</div>
+						<div class="descrip">
+							<h4>Eventos</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam!</p>
+						</div>
+					</div>
+					<div class="msg">
+						<p>
+							Tu estadía está en <br>
+							<span class="hands">buenas manos</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>				
 	</section>
 	<section class="section-call">
 		<div class="contenedor">
@@ -113,6 +187,7 @@
    	<script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
    	<script src="assets/js/vendor/bootstrap.min.js"></script>
    	<script src="assets/js/vendor/jquery.jsmovie.1.4.4.min.js"></script>
+   	<script src="assets/js/vendor/parallax.js"></script>
    	<script src="assets/js/main.js"></script>
 </body>
 </html>

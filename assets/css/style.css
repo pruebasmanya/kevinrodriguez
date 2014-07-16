@@ -8,35 +8,89 @@ a{text-decoration:none !important}
 @media (min-width: 768px){.contenedor{width:750px}
 }@media (min-width: 992px){.contenedor{width:970px}
 }@media (min-width: 1200px){.contenedor{width:1170px}
-}nav{background:#fff;height:70px;padding:0;}
-nav .navbar-brand{padding:7px 0 0 0}
+}nav{background:#fff;height:70px;padding:0;position:relative;}
+nav .navbar-header .navbar-toggle{position:absolute;right:25px;margin:0;bottom:17px;}
+nav .navbar-header .navbar-toggle .icon-bar{background:#000}
+nav .navbar-header .navbar-brand{padding:7px 0 0 0}
+nav .navbar-L{display:none !important}
+@media (min-width: 992px){nav .navbar-header .navbar-toggle{position:absolute;right:25px}
+nav .navbar-L{display:block !important;}
 nav .navbar-L ul li{margin:7px 5px;}
 nav .navbar-L ul li a{color:#fff}
-nav .navbar-L .why-us,nav .navbar-L .reason-to-come{background:#09a6dc;border-bottom:4px solid #0290bf}
-nav .navbar-L .tw{background:#05ccff;border-bottom:4px solid #02b7e4}
-nav .navbar-L .fb{background:#135da9;border-bottom:4px solid #0c5095}
-nav .navbar-L .sky{background:#3d9dd7;border-bottom:4px solid #3787bb}
-nav .navbar-L .call-us{background:#ff576b;border-bottom:4px solid #e02f43}
-.section-main{height:540px;position:relative;}
-.section-main .scena ul{list-style:none;padding:0;margin:0;}
-.section-main .scena ul li{padding:0;}
-.section-main .scena ul li .machupicchu{position:absolute;bottom:0}
-.section-call{height:130px;background:#0a75ad;}
+nav .navbar-L ul .why-us,nav .navbar-L ul .reason-to-come{background:#09a6dc;border-bottom:4px solid #0290bf}
+nav .navbar-L ul .tw{background:#05ccff;border-bottom:4px solid #02b7e4}
+nav .navbar-L ul .fb{background:#135da9;border-bottom:4px solid #0c5095}
+nav .navbar-L ul .sky{background:#3d9dd7;border-bottom:4px solid #3787bb}
+nav .navbar-L ul .call-us{background:#ff576b;border-bottom:4px solid #e02f43}
+}.section-main{height:650px;position:relative;}
+.section-main .div-escena ul{list-style:none;padding:0;margin:0;}
+.section-main .div-escena ul li{padding:0;}
+.section-main .div-escena ul li .machupicchu{position:absolute;}
+.section-main .div-escena ul li .machupicchu img{display:block}
+.section-main .servicios .zone-right{padding-top:65px;position:relative;height:650px;display:block;margin:auto;}
+.section-main .servicios .zone-right .box{display:inline-block;position:relative;}
+.section-main .servicios .zone-right .box .img-Right{float:right !important}
+.section-main .servicios .zone-right .box .img{width:30%;display:inline-block;float:left;text-align:center;padding:10px 0;}
+.section-main .servicios .zone-right .box .img span{line-height:100%}
+.section-main .servicios .zone-right .box .img .img-asesoria,.section-main .servicios .zone-right .box .img .img-transporte,.section-main .servicios .zone-right .box .img .img-hospedaje,.section-main .servicios .zone-right .box .img .img-restaurant,.section-main .servicios .zone-right .box .img .img-eventos{width:75px;height:75px;line-height:75px;-webkit-border-radius:50%;border-radius:50%}
+.section-main .servicios .zone-right .box .img .img-asesoria{background:#9bc347}
+.section-main .servicios .zone-right .box .img .img-transporte{background:#7f50ba}
+.section-main .servicios .zone-right .box .img .img-hospedaje{background:#1ac3d3}
+.section-main .servicios .zone-right .box .img .img-restaurant{background:#ffaf32}
+.section-main .servicios .zone-right .box .img .img-eventos{background:#f23655}
+.section-main .servicios .zone-right .box .descrip{padding:15px 0 0 10px;width:70%;display:inline-block;}
+.section-main .servicios .zone-right .box .descrip h4{padding:0;margin:0;font-weight:bold}
+.section-main .servicios .zone-right .box .descrip p{padding:0;margin:0}
+.section-main .servicios .zone-right .box-asesoria{margin-top:-20px}
+.section-main .servicios .msg{color:#05ccff;position:absolute;bottom:20px;left:20px;}
+.section-main .servicios .msg p{font-size:24px;padding:0;margin:0;line-height:30px;word-spacing:3px;}
+.section-main .servicios .msg p .hands{font-size:34px;font-weight:bold;word-spacing:0;letter-spacing:-1px}
+@media (max-width: 450px){.section-main{height:730px;}
+.section-main .servicios .zone-right{height:730px;}
+.section-main .servicios .zone-right .msg{position:relative;left:0;bottom:0;text-align:center}
+}@media (min-width: 768px) and (max-width: 1199px){.section-main{height:600px;}
+.section-main .servicios .zone-right{height:600px;}
+.section-main .servicios .zone-right .box{position:absolute;}
+.section-main .servicios .zone-right .box .img-Right{float:left !important}
+.section-main .servicios .zone-right .box .img{width:113px;height:113px;padding:0;float:left;}
+.section-main .servicios .zone-right .box .img span{line-height:113px}
+.section-main .servicios .zone-right .box .img .img-asesoria,.section-main .servicios .zone-right .box .img .img-transporte,.section-main .servicios .zone-right .box .img .img-hospedaje,.section-main .servicios .zone-right .box .img .img-restaurant,.section-main .servicios .zone-right .box .img .img-eventos{width:113px;height:113px}
+.section-main .servicios .zone-right .box .descrip{width:220px}
+.section-main .servicios .zone-right .box-asesoria{top:30px;left:280px}
+.section-main .servicios .zone-right .box-transporte{top:150px;left:0}
+.section-main .servicios .zone-right .box-hospedaje{top:260px;left:280px}
+.section-main .servicios .zone-right .box-restaurant{top:370px;left:0}
+.section-main .servicios .zone-right .box-eventos{bottom:10px;left:280px}
+}@media (min-width: 992px){.section-main .servicios .zone-right{float:right;padding-left:50px}
+}@media (min-width: 1200px){.section-main{height:600px;}
+.section-main .servicios .zone-right{height:600px;}
+.section-main .servicios .zone-right .box{position:absolute;}
+.section-main .servicios .zone-right .box .img-Right{float:left !important}
+.section-main .servicios .zone-right .box .img{width:113px;height:113px;padding:0;float:left;}
+.section-main .servicios .zone-right .box .img span{line-height:113px}
+.section-main .servicios .zone-right .box .img .img-asesoria,.section-main .servicios .zone-right .box .img .img-transporte,.section-main .servicios .zone-right .box .img .img-hospedaje,.section-main .servicios .zone-right .box .img .img-restaurant,.section-main .servicios .zone-right .box .img .img-eventos{width:113px;height:113px}
+.section-main .servicios .zone-right .box .descrip{width:220px}
+.section-main .servicios .zone-right .box-asesoria{top:30px;left:0}
+.section-main .servicios .zone-right .box-transporte{top:290px;left:105px}
+.section-main .servicios .zone-right .box-hospedaje{top:110px;left:300px}
+.section-main .servicios .zone-right .box-restaurant{top:270px;right:0}
+.section-main .servicios .zone-right .box-eventos{bottom:10px;left:380px}
+}.section-call{height:130px;background:#0a75ad;}
 .section-call .pictures{position:relative;height:130px;}
-.section-call .pictures .cartel{position:absolute;bottom:20px;left:-10px}
+.section-call .pictures .cartel{position:absolute;bottom:40px;left:-10px}
 .section-call .pictures .movie{position:absolute;bottom:15px;right:-25px}
 .section-call .boton{line-height:130px;}
-.section-call .boton .btn{color:#fff;height:69px;line-height:61px;font-size:18px;background:#ffa800;text-align:center;padding:0 38px;border-bottom:7px solid #e28524}
-@media (max-width: 991px){.section-call .boton .btn{padding:0;width:100%}
-}footer{background:#108bc7;color:#fff;height:100px;border-top:7px solid #239fdd;}
+.section-call .boton .btn{color:#fff;height:69px;line-height:61px;font-size:18px;background:#ffa800;text-align:center;padding:0;width:100%;padding:0 38px;border-bottom:7px solid #e28524}
+@media (min-width: 992px){.section-call .boton .btn{width:auto;padding:0 38px}
+}footer{background:#108bc7;color:#fff;height:auto;border-top:7px solid #239fdd;}
 footer .powered,footer .contact{margin:18px auto auto}
 footer .powered h4{text-align:center;font-size:16px;}
-footer .powered h4 a{color:#fff;margin:auto;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;}
+footer .powered h4 a{color:#fff;margin:auto;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;transition:all 0.5s;}
 footer .powered h4 a:hover{color:azul-claro}
 footer .contact{text-align:center;}
 footer .contact ul{list-style:none;padding-left:0;}
 footer .contact ul li{padding-left:0;display:inline-block;margin:auto;padding:0 8px 0;}
-footer .contact ul li a{display:block;margin:auto;color:#fff;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;}
+footer .contact ul li a{display:block;margin:auto;color:#fff;-webkit-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;transition:all 0.5s;}
 footer .contact ul li a:hover{color:azul-claro}
-@media (max-width: 991px){footer{height:auto}
+@media (min-width: 992px){footer{height:100px}
 }

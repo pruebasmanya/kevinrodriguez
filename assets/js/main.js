@@ -13,5 +13,8 @@ function kalinSaluda(){
         playOnLoad : true
         //loader: {path:"assets/images/kalin.png",height:50,width:50,rows:2,columns:4},        
     });
-
-}
+    
+    $('#scene').parallax({
+    	limitY: 0
+    });
+};
