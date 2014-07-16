@@ -1,0 +1,172 @@
+@import "nib"
+vendor-prefixes = webkit o ms moz
+azul = #22BCE0
+gris_texto= #7A7A7A
+azul_fondo=rgb(16,139,199)
+azul_borde=#239FDD
+azul_fondo2=#0a75ad
+azul_fondo2_over=#0F6A9D
+azul_fondo2_over_clear=#0D6EA3
+naranja=#FFA800
+naranja_oscuro_borde=#E28524
+azul_boton=#09A6DC
+azul_boton_borde=#0290BF
+fondo=#D5E3E6
+btn-tw=#05ccff
+btn-tw-borde=#02b7e4
+btn-fb=#135DA9
+btn-fb-borde=#0C5095
+btn-sky=#3D9DD7
+btn-sky-borde=#3787BB
+btn-callus=#FF576B
+btn-callus-borde=#e02f43
+fecla-idioma=#04A6DC
+asesoria-verde=#9bc347
+hospedaje-azul-claro=#1ac3d3
+transporte-morado=#7f50ba
+restaurant-anaranjado=#ffaf32
+eventos-rojo=#f23655
+texto-manos=#09a7DD
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
+body
+	font-family Oxygen
+	font-size 16px
+	background fondo
+a
+	text-decoration none !important
+.contenedor {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 768px) {
+    .contenedor {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .contenedor {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .contenedor {
+        width: 1170px;
+    }
+}
+nav
+	background #fff
+	height 70px
+	padding 0
+	.navbar-brand
+		padding 7px 0 0 0
+	.navbar-L
+		ul
+			li
+				margin 7px 5px
+				a
+					color #fff
+		.why-us
+		.reason-to-come
+			background azul_boton
+			border-bottom 4px solid azul_boton_borde
+		.tw
+			background btn-tw
+			border-bottom 4px solid btn-tw-borde
+		.fb
+			background btn-fb
+			border-bottom 4px solid btn-fb-borde
+		.sky
+			background btn-sky
+			border-bottom 4px solid btn-sky-borde
+		.call-us
+			background btn-callus
+			border-bottom 4px solid btn-callus-borde			
+
+.section-main
+	height 540px
+	position relative
+	.scena
+		ul
+			list-style none
+			padding 0
+			margin 0
+			li
+				padding 0
+				.machupicchu
+					position absolute
+					bottom 0
+.section-call
+	height 130px
+	background azul_fondo2
+	.pictures
+		position relative
+		height 130px
+		.cartel
+			position absolute
+			bottom 20px
+			left -10px
+		.movie
+			position absolute
+			bottom 15px	
+			right -25px
+
+	.boton
+		line-height 130px
+		.btn
+			color #fff
+			height 69px
+			line-height 61px
+			font-size 18px
+			background naranja			
+			text-align center
+			padding 0 38px
+			border-bottom 7px solid naranja_oscuro_borde			
+@media (max-width: 991px)
+	.section-call					
+		.boton
+			.btn
+				padding 0
+				width 100%
+footer
+	background azul_fondo
+	color #fff
+	height 100px
+	border-top 7px solid azul_borde
+	.powered
+	.contact
+		margin 18px auto auto
+	.powered
+		h4
+			text-align center
+			font-size 16px
+			a
+				color #fff
+				margin auto
+				transition all 0.5s
+				&:hover
+					color azul-claro
+	.contact
+		text-align center
+		ul
+			list-style none
+			padding-left 0
+			li
+				padding-left 0
+				display inline-block
+				margin auto
+				padding 0 8px 0				
+				a
+					display block
+					margin auto
+					color #fff
+					transition all 0.5s
+					&:hover
+						color azul-claro					
+@media (max-width: 991px)
+	footer
+		height auto
