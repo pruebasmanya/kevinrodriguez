@@ -110,6 +110,27 @@ a
         width: 1170px;
     }
 }
+/* 3.4 Preloader*/
+.preloader {
+    background-color:#000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+.loading-animation {
+    background-image: url("../images/preloader_dark.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 43px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+}
 nav
 	background #fff
 	height 70px
@@ -162,7 +183,7 @@ nav
 .flag-pt
 	background-position -66px 0
 .flag-es
-	background-position -22px 0
+	background-position -22px 0	
 .slicknav
 	position fixed
 	display none
@@ -232,28 +253,34 @@ nav
 						position absolute
 						content ""
 						height 25px
-						width 30px
+						width 40px
 						bottom 0
-						right 0px
-						transform skew(35deg)
+						right -5px
+						transform rotate(50deg)
 				.tw
 					background btn-tw
 					border-bottom 4px solid btn-tw-borde
 					&:after
 						background btn-tw-borde
-						background: linear-gradient(to top, rgba(0,0,0,0), btn-tw-borde);
+						background: linear-gradient(to left, rgba(0,0,0,0), btn-tw-borde);
 				.fb
 					background btn-fb
 					border-bottom 4px solid btn-fb-borde
 					&:after
 						background solid btn-fb-borde
-						background: linear-gradient(to top, rgba(0,0,0,0), solid btn-fb-borde);
+						background: linear-gradient(to left, rgba(0,0,0,0), btn-fb-borde);
+						transform rotate(40deg) !important
+						height 20px !important
+						width 30px !important
+						bottom 10px
 				.sky
 					background btn-sky
 					border-bottom 4px solid btn-sky-borde
 					&:after
 						background btn-sky-borde
-						background: linear-gradient(to top, rgba(0,0,0,0), btn-sky-borde);
+						background: linear-gradient(to left, rgba(0,0,0,0), btn-sky-borde);
+						height 20px !important
+						right -10px !important
 				.call-us
 					background btn-callus
 					border-bottom 4px solid btn-callus-borde
@@ -319,35 +346,35 @@ nav
 							position absolute
 							content ""
 							height 40px
-							width 50px
+							width 48px
 							bottom 0
-							right 0px
-							transform skew(35deg)
+							right 5px
+							transform rotate(50deg)
 					.img-asesoria
 						background asesoria-verde
 						&:after
 							background asesoria-verde-sombra
-							background: linear-gradient(to top, rgba(0,0,0,0), asesoria-verde-sombra);
+							background: linear-gradient(to left, rgba(0,0,0,0), asesoria-verde-sombra);
 					.img-transporte
 						background transporte-morado
 						&:after
 							background transporte-morado-sombra
-							background: linear-gradient(to top, rgba(0,0,0,0), transporte-morado-sombra);
+							background: linear-gradient(to left, rgba(0,0,0,0), transporte-morado-sombra);
 					.img-hospedaje
 						background hospedaje-azul-claro
 						&:after
 							background hospedaje-azul-claro-sombra
-							background: linear-gradient(to top, rgba(0,0,0,0), hospedaje-azul-claro-sombra);
+							background: linear-gradient(to left, rgba(0,0,0,0), hospedaje-azul-claro-sombra);
 					.img-restaurant
 						background restaurant-anaranjado
 						&:after
 							background restaurant-anaranjado-sombra
-							background: linear-gradient(to top, rgba(0,0,0,0), restaurant-anaranjado-sombra);
+							background: linear-gradient(to left, rgba(0,0,0,0), restaurant-anaranjado-sombra);
 					.img-eventos
 						background eventos-rojo
 						&:after
 							background eventos-rojo-sombra
-							background: linear-gradient(to top, rgba(0,0,0,0), eventos-rojo-sombra);
+							background: linear-gradient(to left, rgba(0,0,0,0), eventos-rojo-sombra);
 				.descrip
 					padding 15px 0 0 10px
 					width 70%
@@ -413,13 +440,20 @@ nav
 							width 113px
 							height 113px
 							&:after
-								height 65px
-								width 60px
-								right 10px
+								height 45px
+								width 85px
+								right -10px
+						.img-restaurant
+							&:after
+								width 80px !important
+								right -15px !important
+								bottom 20px
+								transform rotate(30deg) !important
+
 					.descrip
 						width 220px
 				.box-asesoria
-					top 30px
+					top 40px
 					left 280px
 				.box-transporte
 					top 150px
@@ -464,13 +498,19 @@ nav
 							width 113px
 							height 113px
 							&:after
-								height 65px
-								width 60px
-								right 10px
+								height 45px
+								width 85px
+								right -10px
+						.img-restaurant
+							&:after
+								width 80px !important
+								right -15px !important
+								bottom 20px
+								transform rotate(30deg) !important
 					.descrip
 						width 220px
 				.box-asesoria
-					top 30px
+					top 40px
 					left 0
 				.box-transporte
 					top 290px
@@ -485,7 +525,37 @@ nav
 				.box-eventos
 					bottom 10px
 					left 380px
-
+@media (min-width: 1200px)
+	.dot-asesoria-to-transporte
+		background url("../images/dots.png") no-repeat -10px -7px
+		width 114px
+		height 172px
+		position absolute
+		top 106px
+		left 19px
+	.dot-transporte-to-hospedaje
+		background url("../images/dots.png") no-repeat -196px -3px
+		width 124px
+		height 129px
+		position absolute
+		top -120px
+		left 85px
+	.dot-hospedaje-to-restaurant
+		background url("../images/dots.png") no-repeat -409px -68px
+		width 170px
+		height 117px
+		position absolute
+		top 90px
+		left 25px
+		z-index -2
+	.dot-restaurant-to-evento
+		background url("../images/dots.png") no-repeat -515px -186px
+		width 79px
+		height 110px
+		position absolute
+		top 100px
+		left -5px
+		z-index -2
 
 .section-call
 	height 130px
