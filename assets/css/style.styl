@@ -26,11 +26,63 @@ hospedaje-azul-claro=#1ac3d3
 transporte-morado=#7f50ba
 restaurant-anaranjado=#ffaf32
 eventos-rojo=#f23655
+asesoria-verde-sombra=#85AD33
+transporte-morado-sombra=#63339E
+hospedaje-azul-claro-sombra=#18ACBC
+restaurant-anaranjado-sombra=#F09D1E
+eventos-rojo-sombra=#DE1B3B
 texto-manos=#09a7DD
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
+@font-face {
+	font-family: "Flaticon";
+	src: url("../font/flaticon.eot");
+	src: url("../font/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../font/flaticon.woff") format("woff"),
+	url("../font/flaticon.ttf") format("truetype"),
+	url("../font/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}.flaticon-arrow486:before {
+	content: "\e000";
+}
+.flaticon-arrow492:before {
+	content: "\e001";
+}
+.flaticon-double7:before {
+	content: "\e002";
+}
+.flaticon-facebook12:before {
+	content: "\e003";
+}
+.flaticon-party:before {
+	content: "\e004";
+}
+.flaticon-person1:before {
+	content: "\e005";
+	position: relative;
+	top: -10px;
+}
+.flaticon-phone54:before {
+	content: "\e006";
+}
+.flaticon-restaurant23:before {
+	content: "\e007";
+}
+.flaticon-skype12:before {
+	content: "\e008";
+}
+.flaticon-social19:before {
+	content: "\e009";
+}
+.flaticon-taxi14:before {
+	content: "\e00a";
+}
 body
 	font-family Oxygen
 	font-size 16px
@@ -74,7 +126,78 @@ nav
 		.navbar-brand
 			padding 7px 0 0 0
 	.navbar-L
-		display none !important					
+		display none !important
+		.navbar-left
+			height 70px
+			line-height 70px
+			.item-idioma
+				margin 0
+				.label-idioma
+					font-weight bold
+				.btn-group
+					.btn
+						border none !important
+						padding 0 25px 0 0
+						.down-arrow
+							position absolute
+							content ""
+							right 0
+							color btn-tw
+					.dropdown-menu
+						min-width 0
+						li
+							a
+								color btn-tw								
+.flag-svg-micro
+	display inline-block
+	vertical-align middle
+	background-image url("../images/flag-sprite.svg")
+	border-radius 200px
+	width 18px
+	height 18px
+	background-size 220px
+	background-position -22px 0
+.flag-en
+	background-position -110px 0
+.flag-pt
+	background-position -66px 0
+.flag-es
+	background-position -22px 0
+.slicknav
+	position fixed
+	display none
+	background-color rgba(0,0,0,0.9)
+	height 100%
+	color #fff
+	overflow auto
+	z-index 56
+	top 0
+	right 0
+	left 0
+	text-align center
+	padding-top 50px
+	.slicknav-btn
+		font-size 40px
+		color #fff
+		margin-top 50px
+		transition all 0.3s
+		&:hover
+			color btn-callus
+	.slicknav-nav
+		list-style none
+		padding 0
+		.list
+			font-size 30px
+			padding 5px 0
+			a
+				color #fff
+				transition all 0.3s
+				&:hover
+					color btn-tw
+			.list-idioma
+				padding 0
+				list-style none
+				font-size 18px
 @media (min-width: 992px)
 	nav
 		.navbar-header
@@ -83,30 +206,63 @@ nav
 				right 25px
 		.navbar-L
 			display block !important
+			.navbar-left
+				padding 0 0 0 10px
 			ul
 				li
 					margin 7px 5px
 					a
 						color #fff
+						transition all 0.5s
+						span
+							position relative
+							z-index 2
+						&:hover
+							color restaurant-anaranjado
 				.why-us
 				.reason-to-come
 					background azul_boton
 					border-bottom 4px solid azul_boton_borde
 				.tw
+				.fb
+				.sky
+					position relative
+					overflow hidden
+					&:after
+						position absolute
+						content ""
+						height 25px
+						width 30px
+						bottom 0
+						right 0px
+						transform skew(35deg)
+				.tw
 					background btn-tw
 					border-bottom 4px solid btn-tw-borde
+					&:after
+						background btn-tw-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), btn-tw-borde);
 				.fb
 					background btn-fb
 					border-bottom 4px solid btn-fb-borde
+					&:after
+						background solid btn-fb-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), solid btn-fb-borde);
 				.sky
 					background btn-sky
 					border-bottom 4px solid btn-sky-borde
+					&:after
+						background btn-sky-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), btn-sky-borde);
 				.call-us
 					background btn-callus
 					border-bottom 4px solid btn-callus-borde
+					&:after
+						background red
 .section-main
 	height 650px
 	position relative
+	overflow hidden
 	.div-escena
 		ul
 			list-style none
@@ -116,9 +272,13 @@ nav
 				padding 0
 				.machupicchu
 					position absolute
+					left -18%
+					bottom 0
 					img
 						display block
 	.servicios
+		position relative
+		z-index 55
 		.zone-right
 			padding-top 65px
 			position relative
@@ -128,6 +288,7 @@ nav
 			.box
 				display inline-block
 				position relative
+				animation bounceIn 3s
 				.img-Right
 					float right !important
 				.img
@@ -137,28 +298,57 @@ nav
 					text-align center
 					padding 10px 0 
 					span
-						line-height 100%
+						line-height 75px
+						position relative
+						z-index 2
+						&:before
+							font-size 48px
+							color #fff
 					.img-asesoria
 					.img-transporte
 					.img-hospedaje
 					.img-restaurant
 					.img-eventos
+						position relative
 						width 75px
 						height 75px
 						line-height 75px
 						border-radius 50%
+						overflow hidden
+						&:after
+							position absolute
+							content ""
+							height 40px
+							width 50px
+							bottom 0
+							right 0px
+							transform skew(35deg)
 					.img-asesoria
 						background asesoria-verde
+						&:after
+							background asesoria-verde-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), asesoria-verde-sombra);
 					.img-transporte
 						background transporte-morado
+						&:after
+							background transporte-morado-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), transporte-morado-sombra);
 					.img-hospedaje
 						background hospedaje-azul-claro
+						&:after
+							background hospedaje-azul-claro-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), hospedaje-azul-claro-sombra);
 					.img-restaurant
 						background restaurant-anaranjado
+						&:after
+							background restaurant-anaranjado-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), restaurant-anaranjado-sombra);
 					.img-eventos
 						background eventos-rojo
+						&:after
+							background eventos-rojo-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), eventos-rojo-sombra);
 				.descrip
-					/*float right*/
 					padding 15px 0 0 10px
 					width 70%
 					display inline-block
@@ -198,7 +388,6 @@ nav
 					left 0
 					bottom 0
 					text-align center
-
 @media (min-width: 768px) and (max-width: 1199px)
 	.section-main
 		height 600px
@@ -223,6 +412,10 @@ nav
 						.img-eventos
 							width 113px
 							height 113px
+							&:after
+								height 65px
+								width 60px
+								right 10px
 					.descrip
 						width 220px
 				.box-asesoria
@@ -270,6 +463,10 @@ nav
 						.img-eventos
 							width 113px
 							height 113px
+							&:after
+								height 65px
+								width 60px
+								right 10px
 					.descrip
 						width 220px
 				.box-asesoria
@@ -292,7 +489,22 @@ nav
 
 .section-call
 	height 130px
-	background azul_fondo2
+	position relative
+	background azul_fondo2	
+	.sombra-der
+		position absolute
+		top 0
+		right 0
+		height 100%
+		width 10%
+		background azul_fondo2_over
+		&:before
+			position absolute
+			content ""
+			top 0
+			left -450px
+			border-bottom 130px solid transparent
+			border-right 450px solid azul_fondo2_over		
 	.pictures
 		position relative
 		height 130px
@@ -307,6 +519,7 @@ nav
 
 	.boton
 		line-height 130px
+		z-index 2
 		.btn
 			color #fff
 			height 69px
@@ -317,9 +530,21 @@ nav
 			padding 0
 			width 100%
 			padding 0 38px
+			transition 0.5s
 			border-bottom 7px solid naranja_oscuro_borde			
+			&:hover
+				background #ed9c28
 @media (min-width: 992px)
-	.section-call					
+	.section-call
+		.sombra-izq
+			position absolute
+			content ""
+			top 0
+			left 0
+			border-left 150px solid azul_fondo2_over_clear
+			border-top 30px solid azul_fondo2_over_clear
+			border-right 150px solid transparent
+			border-bottom 30px solid transparent
 		.boton
 			.btn
 				width auto

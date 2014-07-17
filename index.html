@@ -9,16 +9,17 @@
    	<meta property="og:type" content="website" />
    	<link rel="shortcut icon" href="assets/images/favicon.ico">
    	<title>Travel to Perú</title>
-   	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
    	<link rel="stylesheet" href="assets/css/normalize.css">
    	<link rel="stylesheet" href="assets/css/bootstrap.css">
+   	<link rel="stylesheet" href="assets/css/animate.css">
    	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	<nav>
 		<div class="contenedor">
         	<div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#"> 
+	            <button type="button" class="navbar-toggle btn-toggle-large" data-toggle="collapse" data-target="#"> 
 	               <span class="icon-bar"></span>
 	               <span class="icon-bar"></span>
 	               <span class="icon-bar"></span>
@@ -28,13 +29,21 @@
 	            </a>
          	</div>
 	        <div class="navbar-collapse navbar-L" id="site-nav">
-
 	        	<ul class="nav navbar-nav navbar-left">
-	        		<li>
-	        			Idioma:
-	        			<span>ESP</span>
+	        		<li class="item-idioma">
+	        			<span class="hidden-md label-idioma">Idioma:</span>
+	        			<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="flag-svg-micro flag-es"></span><span class="down-arrow"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#"><span class="flag-svg-micro flag-en"></span> English</a></li>
+								<li><a href="#"><span class="flag-svg-micro flag-es"></span> Español</a></li>
+								<li><a href="#"><span class="flag-svg-micro flag-pt"></span> Português</a></li>
+							</ul>
+						</div>	        			
 	        		</li>
-	        	</ul>
+	        	</ul>	        	
 	            <ul class="nav navbar-nav navbar-right">          
 	               	<li class="">
 	                  	<a href="#aboutme" class="btn why-us">¿Por qué elegirnos?</a></li>
@@ -42,46 +51,70 @@
 	                  	<a href="#skills" class="btn reason-to-come">Razones para visitar el Perú</a></li>
 	               	<li class="">
 	                  	<a href="#whatido" class="btn tw">
-	                  		<span class="i">TW</span>
+	                  		<span class="flaticon-social19"></span>
 	                  	</a>
 	                </li>
 	               	<li class="">
 	                  	<a href="#zonemkp" class="btn fb">
-	                    	<span class="i">FB</span>
+	                    	<span class="flaticon-facebook12"></span>
 	                  	</a>
 	               	</li>
 	               	<li class="">
 	                  	<a href="#contact" class="btn sky">
-	                    	<span class="i">SK</span>
+	                    	<span class="flaticon-skype12"></span>
 	                  	</a>
 	               	</li>
 	               	<li class="">
 	                  	<a href="#contact" class="btn call-us">
-	                    	<span class="i">(+511) 987 9874)</span>
+	                    	<span class="flaticon-phone54">(+511) 987 9874)</span>
 	                  	</a>
 	               	</li>
 	            </ul>
 	        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-		
+	        <div class="slicknav">
+	        	<a href="#" class="slicknav-btn">X</a>
+	        	<ul class="slicknav-nav">
+	        		<li class="list">
+	        			Idioma
+	        			<ul class="list-idioma">
+	        				<li class="sub-list">
+	        					<a href=""><span class="flag-svg-micro flag-en"></span> English</a>
+	        				</li>
+	        				<li class="sub-list">
+	        					<a href=""><span class="flag-svg-micro flag-es"></span> Españos</a>
+	        				</li>
+	        				<li class="sub-list"><a
+	        				 href=""><span class="flag-svg-micro flag-pt"></span> Português</a>
+	        				</li>
+	        			</ul>
+	        		</li>
+	        		<li class="list ">
+	        			<a href="">¿Por qué elegirnos?</a>
+	        		</li>
+	        		<li class="list ">
+	        			<a href="">Razones para visitar Perú</a>
+	        		</li>
+	        		<li class="list ">
+	        			<a href=""><span class="flaticon-social19"></span> </a>	        			
+	        		</li>
+	        		<li class="list ">
+	        			<a href=""><span class="flaticon-facebook12"></span> </a>	        			
+	        		</li>
+	        		<li class="list ">
+	        			<a href=""><span class="flaticon-skype12"></span> </a>	        			
+	        		</li>
+	        	</ul>
+	        </div>
+      	</div><!-- /.container-fluid -->		
 	</nav>
-	<section class="section-main">
-		<div class="div-escena">
-			<ul class="scene" id="scene">
-				<li class="layer" data-depth="0.20">
-					<div class="machupicchu">
-						<img src="assets/images/fondo.png" alt="">
-					</div>
-				</li>
-			</ul>
-		</div>
+	<section class="section-main">		
 		<div class="contenedor">
 			<div class="row servicios">
 				<div class="col-md-8 zone-right">
 					<div class="box box-asesoria">
 						<div class="img">
 							<div class="img-asesoria">
-								<span class="i">IMAGEN</span>
+								<span class="flaticon-double7"></span>
 							</div>
 						</div>
 						<div class="descrip">
@@ -92,7 +125,7 @@
 					<div class="box box-transporte">
 						<div class="img img-Right">
 							<div class="img-transporte">
-								<span class="i">IMAGEN</span>
+								<span class="flaticon-taxi14"></span>
 							</div>
 						</div>
 						<div class="descrip">
@@ -103,7 +136,7 @@
 					<div class="box box-hospedaje">
 						<div class="img">
 							<div class="img-hospedaje">
-								<span class="i">IMAGEN</span>
+								<span class="flaticon-person1"></span>
 							</div>
 						</div>
 						<div class="descrip">
@@ -114,18 +147,18 @@
 					<div class="box box-restaurant">
 						<div class="img img-Right">
 							<div class="img-restaurant">
-								<span class="i">IMAGEN</span>
+								<span class="flaticon-restaurant23"></span>
 							</div>
 						</div>
 						<div class="descrip">
-							<h4>Restaurant</h4>
+							<h4>Restaurante</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut.</p>
 						</div>
 					</div>
 					<div class="box box-eventos">
 						<div class="img">
 							<div class="img-eventos">
-								<span class="i">IMAGEN</span>
+								<span class="flaticon-party"></span>
 							</div>
 						</div>
 						<div class="descrip">
@@ -141,9 +174,19 @@
 					</div>
 				</div>
 			</div>
+			<div class="div-escena">
+			<ul class="scene" id="scene">
+				<li class="layer" data-depth="0.20">
+					<div class="machupicchu">
+						<img src="assets/images/fondo.png" alt="">
+					</div>
+				</li>
+			</ul>
+		</div>
 		</div>				
 	</section>
 	<section class="section-call">
+		<div class="sombra-izq"></div>
 		<div class="contenedor">
 			<div class="row">
 				<div class="hidden-xs hidden-sm col-md-4 pictures">
@@ -158,6 +201,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="sombra-der"></div>
 	</section>
 	<footer>
 		<div class="contenedor">
