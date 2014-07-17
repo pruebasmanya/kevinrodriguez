@@ -1,0 +1,589 @@
+@import "nib"
+vendor-prefixes = webkit o ms moz official
+azul = #22BCE0
+gris_texto= #7A7A7A
+azul_fondo=rgb(16,139,199)
+azul_borde=#239FDD
+azul_fondo2=#0a75ad
+azul_fondo2_over=#0F6A9D
+azul_fondo2_over_clear=#0D6EA3
+naranja=#FFA800
+naranja_oscuro_borde=#E28524
+azul_boton=#09A6DC
+azul_boton_borde=#0290BF
+fondo=#D5E3E6
+btn-tw=#05ccff
+btn-tw-borde=#02b7e4
+btn-fb=#135DA9
+btn-fb-borde=#0C5095
+btn-sky=#3D9DD7
+btn-sky-borde=#3787BB
+btn-callus=#FF576B
+btn-callus-borde=#e02f43
+fecla-idioma=#04A6DC
+asesoria-verde=#9bc347
+hospedaje-azul-claro=#1ac3d3
+transporte-morado=#7f50ba
+restaurant-anaranjado=#ffaf32
+eventos-rojo=#f23655
+asesoria-verde-sombra=#85AD33
+transporte-morado-sombra=#63339E
+hospedaje-azul-claro-sombra=#18ACBC
+restaurant-anaranjado-sombra=#F09D1E
+eventos-rojo-sombra=#DE1B3B
+texto-manos=#09a7DD
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
+@font-face {
+	font-family: "Flaticon";
+	src: url("../font/flaticon.eot");
+	src: url("../font/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../font/flaticon.woff") format("woff"),
+	url("../font/flaticon.ttf") format("truetype"),
+	url("../font/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}.flaticon-arrow486:before {
+	content: "\e000";
+}
+.flaticon-arrow492:before {
+	content: "\e001";
+}
+.flaticon-double7:before {
+	content: "\e002";
+}
+.flaticon-facebook12:before {
+	content: "\e003";
+}
+.flaticon-party:before {
+	content: "\e004";
+}
+.flaticon-person1:before {
+	content: "\e005";
+	position: relative;
+	top: -10px;
+}
+.flaticon-phone54:before {
+	content: "\e006";
+}
+.flaticon-restaurant23:before {
+	content: "\e007";
+}
+.flaticon-skype12:before {
+	content: "\e008";
+}
+.flaticon-social19:before {
+	content: "\e009";
+}
+.flaticon-taxi14:before {
+	content: "\e00a";
+}
+body
+	font-family Oxygen
+	font-size 16px
+	background fondo
+a
+	text-decoration none !important
+.contenedor {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 768px) {
+    .contenedor {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .contenedor {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .contenedor {
+        width: 1170px;
+    }
+}
+nav
+	background #fff
+	height 70px
+	padding 0
+	position relative
+	.navbar-header
+		.navbar-toggle
+			position absolute
+			right 25px
+			margin 0
+			bottom 17px
+			.icon-bar
+				background #000
+		.navbar-brand
+			padding 7px 0 0 0
+	.navbar-L
+		display none !important
+		.navbar-left
+			height 70px
+			line-height 70px
+			.item-idioma
+				margin 0
+				.label-idioma
+					font-weight bold
+				.btn-group
+					.btn
+						border none !important
+						padding 0 25px 0 0
+						.down-arrow
+							position absolute
+							content ""
+							right 0
+							color btn-tw
+					.dropdown-menu
+						min-width 0
+						li
+							a
+								color btn-tw								
+.flag-svg-micro
+	display inline-block
+	vertical-align middle
+	background-image url("../images/flag-sprite.svg")
+	border-radius 200px
+	width 18px
+	height 18px
+	background-size 220px
+	background-position -22px 0
+.flag-en
+	background-position -110px 0
+.flag-pt
+	background-position -66px 0
+.flag-es
+	background-position -22px 0
+.slicknav
+	position fixed
+	display none
+	background-color rgba(0,0,0,0.9)
+	height 100%
+	color #fff
+	overflow auto
+	z-index 56
+	top 0
+	right 0
+	left 0
+	text-align center
+	padding-top 50px
+	.slicknav-btn
+		font-size 40px
+		color #fff
+		margin-top 50px
+		transition all 0.3s
+		&:hover
+			color btn-callus
+	.slicknav-nav
+		list-style none
+		padding 0
+		.list
+			font-size 30px
+			padding 5px 0
+			a
+				color #fff
+				transition all 0.3s
+				&:hover
+					color btn-tw
+			.list-idioma
+				padding 0
+				list-style none
+				font-size 18px
+@media (min-width: 992px)
+	nav
+		.navbar-header
+			.navbar-toggle
+				position absolute
+				right 25px
+		.navbar-L
+			display block !important
+			.navbar-left
+				padding 0 0 0 10px
+			ul
+				li
+					margin 7px 5px
+					a
+						color #fff
+						transition all 0.5s
+						span
+							position relative
+							z-index 2
+						&:hover
+							color restaurant-anaranjado
+				.why-us
+				.reason-to-come
+					background azul_boton
+					border-bottom 4px solid azul_boton_borde
+				.tw
+				.fb
+				.sky
+					position relative
+					overflow hidden
+					&:after
+						position absolute
+						content ""
+						height 25px
+						width 30px
+						bottom 0
+						right 0px
+						transform skew(35deg)
+				.tw
+					background btn-tw
+					border-bottom 4px solid btn-tw-borde
+					&:after
+						background btn-tw-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), btn-tw-borde);
+				.fb
+					background btn-fb
+					border-bottom 4px solid btn-fb-borde
+					&:after
+						background solid btn-fb-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), solid btn-fb-borde);
+				.sky
+					background btn-sky
+					border-bottom 4px solid btn-sky-borde
+					&:after
+						background btn-sky-borde
+						background: linear-gradient(to top, rgba(0,0,0,0), btn-sky-borde);
+				.call-us
+					background btn-callus
+					border-bottom 4px solid btn-callus-borde
+					&:after
+						background red
+.section-main
+	height 650px
+	position relative
+	overflow hidden
+	.div-escena
+		ul
+			list-style none
+			padding 0
+			margin 0
+			li
+				padding 0
+				.machupicchu
+					position absolute
+					left -18%
+					bottom 0
+					img
+						display block
+	.servicios
+		position relative
+		z-index 55
+		.zone-right
+			padding-top 65px
+			position relative
+			height 650px
+			display block
+			margin auto
+			.box
+				display inline-block
+				position relative
+				animation bounceIn 3s
+				.img-Right
+					float right !important
+				.img
+					width 30%				
+					display inline-block
+					float left
+					text-align center
+					padding 10px 0 
+					span
+						line-height 75px
+						position relative
+						z-index 2
+						&:before
+							font-size 48px
+							color #fff
+					.img-asesoria
+					.img-transporte
+					.img-hospedaje
+					.img-restaurant
+					.img-eventos
+						position relative
+						width 75px
+						height 75px
+						line-height 75px
+						border-radius 50%
+						overflow hidden
+						&:after
+							position absolute
+							content ""
+							height 40px
+							width 50px
+							bottom 0
+							right 0px
+							transform skew(35deg)
+					.img-asesoria
+						background asesoria-verde
+						&:after
+							background asesoria-verde-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), asesoria-verde-sombra);
+					.img-transporte
+						background transporte-morado
+						&:after
+							background transporte-morado-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), transporte-morado-sombra);
+					.img-hospedaje
+						background hospedaje-azul-claro
+						&:after
+							background hospedaje-azul-claro-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), hospedaje-azul-claro-sombra);
+					.img-restaurant
+						background restaurant-anaranjado
+						&:after
+							background restaurant-anaranjado-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), restaurant-anaranjado-sombra);
+					.img-eventos
+						background eventos-rojo
+						&:after
+							background eventos-rojo-sombra
+							background: linear-gradient(to top, rgba(0,0,0,0), eventos-rojo-sombra);
+				.descrip
+					padding 15px 0 0 10px
+					width 70%
+					display inline-block
+					h4
+						padding 0
+						margin 0
+						font-weight bold
+					p
+						padding 0
+						margin 0
+			.box-asesoria
+				margin-top -20px
+		.msg
+			color btn-tw
+			position absolute
+			bottom 20px
+			left 20px
+			p
+				font-size 24px
+				padding 0
+				margin 0
+				line-height 30px
+				word-spacing 3px
+				.hands
+					font-size 34px
+					font-weight bold
+					word-spacing 0px
+					letter-spacing -1px
+@media (max-width: 450px)
+	.section-main
+		height 730px
+		.servicios
+			.zone-right
+				height 730px
+				.msg
+					position relative
+					left 0
+					bottom 0
+					text-align center
+@media (min-width: 768px) and (max-width: 1199px)
+	.section-main
+		height 600px
+		.servicios
+			.zone-right
+				height 600px
+				.box
+					position absolute
+					.img-Right
+						float left !important
+					.img
+						width 113px
+						height 113px
+						padding 0
+						float left
+						span
+							line-height 113px
+						.img-asesoria
+						.img-transporte
+						.img-hospedaje
+						.img-restaurant
+						.img-eventos
+							width 113px
+							height 113px
+							&:after
+								height 65px
+								width 60px
+								right 10px
+					.descrip
+						width 220px
+				.box-asesoria
+					top 30px
+					left 280px
+				.box-transporte
+					top 150px
+					left 0
+				.box-hospedaje
+					top 260px
+					left 280px
+				.box-restaurant
+					top 370px
+					left 0
+				.box-eventos
+					bottom 10px
+					left 280px
+@media (min-width: 992px)
+	.section-main
+		.servicios
+			.zone-right
+				float right
+				padding-left 50px
+@media (min-width: 1200px)
+	.section-main
+		height 600px
+		.servicios
+			.zone-right
+				height 600px
+				.box
+					position absolute
+					.img-Right
+						float left !important
+					.img
+						width 113px
+						height 113px
+						padding 0
+						float left
+						span
+							line-height 113px
+						.img-asesoria
+						.img-transporte
+						.img-hospedaje
+						.img-restaurant
+						.img-eventos
+							width 113px
+							height 113px
+							&:after
+								height 65px
+								width 60px
+								right 10px
+					.descrip
+						width 220px
+				.box-asesoria
+					top 30px
+					left 0
+				.box-transporte
+					top 290px
+					/*right 0px*/
+					left 105px
+				.box-hospedaje
+					top 110px
+					left 300px
+				.box-restaurant
+					top 270px
+					right 0
+				.box-eventos
+					bottom 10px
+					left 380px
+
+
+.section-call
+	height 130px
+	position relative
+	background azul_fondo2	
+	.sombra-der
+		position absolute
+		top 0
+		right 0
+		height 100%
+		width 10%
+		background azul_fondo2_over
+		&:before
+			position absolute
+			content ""
+			top 0
+			left -450px
+			border-bottom 130px solid transparent
+			border-right 450px solid azul_fondo2_over		
+	.pictures
+		position relative
+		height 130px
+		.cartel
+			position absolute
+			bottom 40px
+			left -10px
+		.movie
+			position absolute
+			bottom 15px	
+			right -25px
+
+	.boton
+		line-height 130px
+		z-index 2
+		.btn
+			color #fff
+			height 69px
+			line-height 61px
+			font-size 18px
+			background naranja			
+			text-align center
+			padding 0
+			width 100%
+			padding 0 38px
+			transition 0.5s
+			border-bottom 7px solid naranja_oscuro_borde			
+			&:hover
+				background #ed9c28
+@media (min-width: 992px)
+	.section-call
+		.sombra-izq
+			position absolute
+			content ""
+			top 0
+			left 0
+			border-left 150px solid azul_fondo2_over_clear
+			border-top 30px solid azul_fondo2_over_clear
+			border-right 150px solid transparent
+			border-bottom 30px solid transparent
+		.boton
+			.btn
+				width auto
+				padding 0 38px
+footer
+	background azul_fondo
+	color #fff
+	height auto
+	border-top 7px solid azul_borde
+	.powered
+	.contact
+		margin 18px auto auto
+	.powered
+		h4
+			text-align center
+			font-size 16px
+			a
+				color #fff
+				margin auto
+				transition all 0.5s
+				&:hover
+					color azul-claro
+	.contact
+		text-align center
+		ul
+			list-style none
+			padding-left 0
+			li
+				padding-left 0
+				display inline-block
+				margin auto
+				padding 0 8px 0				
+				a
+					display block
+					margin auto
+					color #fff
+					transition all 0.5s
+					&:hover
+						color azul-claro					
+@media (min-width: 992px)
+	footer
+		height 100px
