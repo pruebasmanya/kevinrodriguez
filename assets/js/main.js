@@ -1,6 +1,7 @@
 $(document).on('ready',kalinSaluda);
 $(document).on('ready',modalMenu);
 $(document).on('ready',dropdownIdioma);
+$(document).on('ready',preload);
 function kalinSaluda(){
 	$('.movie').jsMovie({
         //sequence: 'animation####.jpg',
@@ -32,12 +33,17 @@ function modalMenu(){
 };
 function dropdownIdioma(){
 	$('.down-arrow').addClass('flaticon-arrow486');
-    $('.dropdown-toggle').click(function(e){
+	$('.dropdown-toggle').click(function(e){
 		e.preventDefault();		
 		if($('.btn-group').hasClass('open')){
-			$('.down-arrow').addClass('flaticon-arrow492');
+			$('.down-arrow').removeClass('flaticon-arrow486').addClass('flaticon-arrow492');
 		}else{
-			$('.down-arrow').removeClass('flaticon-arrow486').addClass('flaticon-arrow486');
+			$('.down-arrow').removeClass('flaticon-arrow492').addClass('flaticon-arrow486');
 		}
 	});
+};
+function preload(){
+	'use strict';
+    jQuery("#loading-animation").fadeOut("slow");
+    jQuery("#preloader").delay(700).fadeOut("slow");
 };
