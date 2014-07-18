@@ -110,7 +110,9 @@ a
         width: 1170px;
     }
 }
-/* 3.4 Preloader*/
+/* ***************************** 
+			Preloader
+********************************/
 .preloader {
     background-color:#000;
     bottom: 0;
@@ -131,6 +133,9 @@ a
     top: 50%;
     width: 40px;
 }
+/* ***************************** 
+			Nav
+********************************/
 nav
 	background #fff
 	height 70px
@@ -168,7 +173,8 @@ nav
 						min-width 0
 						li
 							a
-								color btn-tw								
+								color btn-tw
+/* Banderas del dropdown */
 .flag-svg-micro
 	display inline-block
 	vertical-align middle
@@ -183,7 +189,8 @@ nav
 .flag-pt
 	background-position -66px 0
 .flag-es
-	background-position -22px 0	
+	background-position -22px 0
+/* NAV Modal */
 .slicknav
 	position fixed
 	display none
@@ -219,6 +226,7 @@ nav
 				padding 0
 				list-style none
 				font-size 18px
+/* NAV para >= 992 */
 @media (min-width: 992px)
 	nav
 		.navbar-header
@@ -286,10 +294,14 @@ nav
 					border-bottom 4px solid btn-callus-borde
 					&:after
 						background red
+/* ***************************** 
+		Sección que contiene la infografía
+********************************/
 .section-main
 	height 650px
 	position relative
 	overflow hidden
+	width 100%
 	.div-escena
 		ul
 			list-style none
@@ -299,7 +311,7 @@ nav
 				padding 0
 				.machupicchu
 					position absolute
-					left -18%
+					left -36%
 					bottom 0
 					img
 						display block
@@ -324,6 +336,18 @@ nav
 					float left
 					text-align center
 					padding 10px 0 
+					position relative
+					&:before
+						position absolute
+						content ""
+						width 75px
+						height 75px
+						left 0
+						zoom 1
+						-ms-zoom 1
+						-webkit-zoom 1
+						border-radius 50%
+						transition all 0.5s
 					span
 						line-height 75px
 						position relative
@@ -342,6 +366,7 @@ nav
 						line-height 75px
 						border-radius 50%
 						overflow hidden
+						transition all 0.5s
 						&:after
 							position absolute
 							content ""
@@ -375,6 +400,14 @@ nav
 						&:after
 							background eventos-rojo-sombra
 							background: linear-gradient(to left, rgba(0,0,0,0), eventos-rojo-sombra);
+			.box
+				&:hover
+					.img
+						&:before
+							background btn-tw
+							transform scale(2)
+							transition all 0.5s
+							opacity 0
 				.descrip
 					padding 15px 0 0 10px
 					width 70%
@@ -399,11 +432,13 @@ nav
 				margin 0
 				line-height 30px
 				word-spacing 3px
+				text-shadow 1px 1px 1px #fff
 				.hands
 					font-size 34px
 					font-weight bold
 					word-spacing 0px
 					letter-spacing -1px
+/** Sección main <= 450 **/
 @media (max-width: 450px)
 	.section-main
 		height 730px
@@ -415,6 +450,7 @@ nav
 					left 0
 					bottom 0
 					text-align center
+/**  768 <= Seccion main >= 1199  **/
 @media (min-width: 768px) and (max-width: 1199px)
 	.section-main
 		height 600px
@@ -430,6 +466,9 @@ nav
 						height 113px
 						padding 0
 						float left
+						&:before
+							width 113px
+							height 113px
 						span
 							line-height 113px
 						.img-asesoria
@@ -441,15 +480,16 @@ nav
 							height 113px
 							&:after
 								height 45px
-								width 85px
-								right -10px
+								width 55px
+								top 50px
+								right 19px
 						.img-restaurant
 							&:after
-								width 80px !important
-								right -15px !important
-								bottom 20px
+								width 55px !important
+								height 40px !important
+								right 8px !important
+								top 45px
 								transform rotate(30deg) !important
-
 					.descrip
 						width 220px
 				.box-asesoria
@@ -467,12 +507,15 @@ nav
 				.box-eventos
 					bottom 10px
 					left 280px
+/**  Seccion main >= 992  **/
+/**  Solo es para modificar la zone-right **/
 @media (min-width: 992px)
 	.section-main
 		.servicios
 			.zone-right
 				float right
 				padding-left 50px
+/**  1200 <= Seccion main  **/
 @media (min-width: 1200px)
 	.section-main
 		height 600px
@@ -488,6 +531,9 @@ nav
 						height 113px
 						padding 0
 						float left
+						&:before
+							width 113px
+							height 113px
 						span
 							line-height 113px
 						.img-asesoria
@@ -499,13 +545,15 @@ nav
 							height 113px
 							&:after
 								height 45px
-								width 85px
-								right -10px
+								width 55px
+								top 55px
+								right 15px
 						.img-restaurant
 							&:after
-								width 80px !important
-								right -15px !important
-								bottom 20px
+								width 55px !important
+								height 40px !important
+								right 8px !important
+								top 45px
 								transform rotate(30deg) !important
 					.descrip
 						width 220px
@@ -525,23 +573,123 @@ nav
 				.box-eventos
 					bottom 10px
 					left 380px
+/**  Estilos para los <<< puntos de la infografía >>> **/
+@media (max-width: 455px)
+	.dot-asesoria-to-transporte
+		background url("../images/dots.png") no-repeat -39px -617px
+		width 238px
+		height 52px
+		position absolute
+		top 70px
+		left 50px
+		z-index -2
+	.dot-transporte-to-hospedaje
+		background url("../images/dots.png") no-repeat -24px -712px
+		width 232px
+		height 59px
+		position absolute
+		top 80px
+		left 60px
+		z-index -2
+	.dot-hospedaje-to-restaurant
+		background url("../images/dots.png") no-repeat -67px -812px
+		width 216px
+		height 64px
+		position absolute
+		top 70px
+		left 70px
+		z-index -2
+	.dot-restaurant-to-evento
+		background url("../images/dots.png") no-repeat -251px -735px
+		width 229px
+		height 58px
+		position absolute
+		top 90px
+		left 60px
+		z-index -2
+@media (min-width: 456px) and (max-width: 768px)
+	.dot-asesoria-to-transporte
+		background url("../images/dots.png") no-repeat -36px -3px
+		width 300px
+		height 63px
+		position absolute
+		top 70px
+		left 75px
+		z-index -2
+	.dot-transporte-to-hospedaje
+		background url("../images/dots.png") no-repeat -15px -96px
+		width 309px
+		height 63px
+		position absolute
+		top 80px
+		left 58px
+		z-index -2
+	.dot-hospedaje-to-restaurant
+		background url("../images/dots.png") no-repeat -17px -207px
+		width 286px
+		height 59px
+		position absolute
+		top 70px
+		left 70px
+		z-index -2
+	.dot-restaurant-to-evento
+		background url("../images/dots.png") no-repeat -24px -303px
+		width 298px
+		height 57px
+		position absolute
+		top 80px
+		left 65px
+		z-index -2
+@media (min-width: 768px) and (max-width: 1199px)
+	.dot-asesoria-to-transporte
+		background url("../images/dots.png") no-repeat -377px 0px
+		width 224px
+		height 92px
+		position absolute
+		top 40px
+		left -200px
+		z-index -2
+	.dot-transporte-to-hospedaje
+		background url("../images/dots.png") no-repeat -395px -167px
+		width 226px
+		height 62px
+		position absolute
+		top 85px
+		left 90px
+		z-index -2
+	.dot-hospedaje-to-restaurant
+		background url("../images/dots.png") no-repeat -393px -251px
+		width 224px
+		height 78px
+		position absolute
+		top 50px
+		left -190px
+		z-index -2
+	.dot-restaurant-to-evento
+		background url("../images/dots.png") no-repeat -400px -381px
+		width 204px
+		height 80px
+		position absolute
+		top 60px
+		left 90px
+		z-index -2
 @media (min-width: 1200px)
 	.dot-asesoria-to-transporte
-		background url("../images/dots.png") no-repeat -10px -7px
+		background url("../images/dots.png") no-repeat -11px -426px
 		width 114px
 		height 172px
 		position absolute
 		top 106px
 		left 19px
 	.dot-transporte-to-hospedaje
-		background url("../images/dots.png") no-repeat -196px -3px
+		background url("../images/dots.png") no-repeat -197px -422px
 		width 124px
 		height 129px
 		position absolute
 		top -120px
 		left 85px
 	.dot-hospedaje-to-restaurant
-		background url("../images/dots.png") no-repeat -409px -68px
+		background url("../images/dots.png") no-repeat -410px -487px
 		width 170px
 		height 117px
 		position absolute
@@ -549,14 +697,16 @@ nav
 		left 25px
 		z-index -2
 	.dot-restaurant-to-evento
-		background url("../images/dots.png") no-repeat -515px -186px
+		background url("../images/dots.png") no-repeat -516px -605px
 		width 79px
 		height 110px
 		position absolute
 		top 100px
 		left -5px
 		z-index -2
-
+/* ***************************** 
+			Seccion del boton call to action
+********************************/
 .section-call
 	height 130px
 	position relative
@@ -586,7 +736,6 @@ nav
 			position absolute
 			bottom 15px	
 			right -25px
-
 	.boton
 		line-height 130px
 		z-index 2
@@ -604,6 +753,7 @@ nav
 			border-bottom 7px solid naranja_oscuro_borde			
 			&:hover
 				background #ed9c28
+/** 992 <= Seccion call to action	**/
 @media (min-width: 992px)
 	.section-call
 		.sombra-izq
@@ -619,6 +769,9 @@ nav
 			.btn
 				width auto
 				padding 0 38px
+/* ***************************** 
+		Footer
+********************************/
 footer
 	background azul_fondo
 	color #fff
@@ -653,7 +806,8 @@ footer
 					color #fff
 					transition all 0.5s
 					&:hover
-						color azul-claro					
+						color azul-claro
+/** 992 <= Footer **/
 @media (min-width: 992px)
 	footer
 		height 100px
